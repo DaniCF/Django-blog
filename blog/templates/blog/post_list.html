@@ -7,9 +7,13 @@
 		<h1>Its over Anakin!</h1>
 		<h2>I have the high ground!</h2>
 	</div>
-	<div>
-		<h1>You underestimate my power!</h1>
-	</div>
+	{% for post in posts %}
+		<div>
+			<p>publicado: {{ post.published_date }}</p>
+			<h1><a href="">{{ post.title }}</a></h1>
+			<p>{{ post.text|linebreaksbr }}</p>
+		</div>
+	{% endfor %}
 	<div>
 		<h2>Dont try it!</h2>
 	</div>
